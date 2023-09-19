@@ -1,3 +1,15 @@
+/* Firefox */
+html {scrollbar-width: 10px;;scrollbar-color: #fbb040 #f1f1f1;}
+/* Opera */
+html::-o-scrollbar {width: 10px;}/*스크롤바 크기*/
+html::-o-scrollbar-thumb {background-color: #fbb040; border-radius: 5px;}/*스크롤 드래그바*/
+html::-o-scrollbar-thumb:hover {background-color: #555;}
+/* Chrome, Safari, Edge 등 웹킷 기반 브라우저 */
+::-webkit-scrollbar {width: 10px;}/*스크롤바 크기*/
+::-webkit-scrollbar-track {box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.3);}/*스크롤바 배경*/
+::-webkit-scrollbar-thumb {background-color: #ffc163; border-radius: 5px;}/*스크롤 드래그바*/
+::-webkit-scrollbar-thumb:hover {background-color: #555;}
+
 /* nav 동작 */
 body, html {scroll-behavior:smooth;}
 body {min-width:1600px;}
@@ -41,7 +53,7 @@ main #main {overflow-x: hidden;}
 main #main .section {width:100%; height:100vh;}
 main #main #home_wrap {}
 main #main #home_wrap .home_bg_wrap { padding-top:140px; }
-main #main #home_wrap .home_bg_wrap video { width:100%; position: absolute; left:0; top:-16%;}
+main #main #home_wrap .home_bg_wrap video { width:100%; position: absolute; left:0; top:-14%;}
 main #main #home_wrap .home_bg_wrap .bg_txt1 {position:absolute; top:15%; height:110px; width:150%; background:url(../images/bg_txt.png) center repeat-x; animation:txt_bg 80s linear infinite reverse; filter:opacity(5%);}
 main #main #home_wrap .home_bg_wrap .bg_txt2 {position:absolute; bottom:15%; height:110px; width:150%; background:url(../images/bg_txt1.png) center repeat-x; animation:txt_bg1 80s linear infinite reverse; filter:opacity(5%);}
 /* main txt */
@@ -59,9 +71,17 @@ main #main #home_wrap .scroll_down {display:flex; flex-flow:column nowrap; align
 main #main #home_wrap .scroll_down span {font-size:1.333rem; margin-bottom:10px;}
 main #main #home_wrap .scroll_down img {width:30px; height:30px; animation:y20 0.8s linear infinite alternate;}
 /* profile */
-main #main #profile {width:1200px; margin:0 auto;}
+main #main #profile {width:1400px; margin:0 auto;}
+main #main #profile .bg_txt { width:100%; height:100%;
+    position:absolute; bottom: 10%; background:url(../images/bg_txt2.png) bottom repeat-x; animation:txt_bg1 80s linear infinite reverse; filter:opacity(5%);}
 main #main #profile h1 {animation:opacity_h1 1.5s ease;}
-main #main #profile .profile_wrap {}
+main #main #profile .profile_wrap {display:flex;}
+main #main #profile .profile_wrap .left {transform:translateY(20%);}
+main #main #profile .profile_wrap .left > img {width:300px; height:300px;}
+main #main #profile .profile_wrap .left a {display:flex; align-items: center; justify-content:center; margin-top:80px; background:#ff9900; color:#fff; border-radius:10px; padding:10px; transition:all 0.5s;}
+main #main #profile .profile_wrap .left a:hover {background:#6b6b6b;}
+main #main #profile .profile_wrap .left a span {font-size:1.33rem; font-weight:600; margin-right:10px; }
+main #main #profile .profile_wrap .left a img {width:30px; }
 main #main #profile .profile_wrap .contents {display:flex; flex-flow:row wrap; justify-content:center; margin-top:50px;}
 /* 공통영역 */
 main #main #profile .profile_wrap .contents > div {padding:30px;}
@@ -88,27 +108,90 @@ main #main #skills .container li .icon {width:80px; animation:icon_move 1s linea
 main #main #skills .container li .icon img {}
 main #main #skills .container li .contents {width:calc(100% - 80px); font-size:1.25rem ; font-weight:600; line-height:40px; letter-spacing:-0.02em;}
 /* 웹프로젝트 */
-main #main #project_web {margin-top:100px;}
-main #main #project_web h1 { text-align:center;}
-main #main #project_web h1 img {height:60px;}
-main #main #project_web #web_wrap {width:1400px; height:850px; margin:50px auto;}
+main #main #project_web {}
+main #main #project_web h1 {text-align:center; position: absolute; top:10%; left:50%; transform:translateX(-50%);}
+main #main #project_web h1 img {height:50px;}
+main #main #project_web #web_wrap {width:1400px; padding-top:120px; margin:0 auto;}
 /* 버튼 */
 main #main #project_web #web_wrap .swiper-button-prev, 
 main #main #project_web #web_wrap .swiper-button-next {width:50px; height:50px;}
 main #main #project_web #web_wrap .swiper-button-prev::after, 
 main #main #project_web #web_wrap .swiper-button-next::after {display:none;}
-main #main #project_web #web_wrap .swiper-button-prev {background:url(../images/prev.png) no-repeat;}
-main #main #project_web #web_wrap .swiper-button-next {background:url(../images/next.png) no-repeat;}
+main #main #project_web #web_wrap .swiper-button-prev {background:url(../images/prev1.png) no-repeat;}
+main #main #project_web #web_wrap .swiper-button-next {background:url(../images/next1.png) no-repeat;}
 main #main #project_web #web_wrap .swiper-wrapper {}
-main #main #project_web #web_wrap .swiper-wrapper .swiper-slide {padding:0 100px; text-align:center;}
+main #main #project_web #web_wrap .swiper-wrapper .swiper-slide {padding:0 80px; text-align:center;}
 main #main #project_web #web_wrap .swiper-wrapper .swiper-slide .preview {}
-main #main #project_web #web_wrap .swiper-wrapper .swiper-slide .preview h2 {}
-main #main #project_web #web_wrap .swiper-wrapper .swiper-slide .preview h2 img {width:250px;}
-main #main #project_web #web_wrap .swiper-wrapper .swiper-slide .preview img {margin:30px 0; width:500px;}
-main #main #project_web #web_wrap .swiper-wrapper .swiper-slide .project_info {}
-main #main #project_web #web_wrap .swiper-wrapper .swiper-slide .project_info p {}
-main #main #project_web #web_wrap .swiper-wrapper .swiper-slide .link {}
-main #main #project_web #web_wrap .swiper-wrapper .swiper-slide .link a {}
+main #main #project_web #web_wrap .swiper-wrapper .swiper-slide .preview h2 {height:40px;}
+main #main #project_web #web_wrap .swiper-wrapper .swiper-slide .preview h2 img {width:70%;}
+main #main #project_web #web_wrap .swiper-wrapper .swiper-slide .preview > img {margin:30px 0; height:340px;}
+main #main #project_web #web_wrap .swiper-wrapper .swiper-slide .project_info {transform:translateX(20%);}
+main #main #project_web #web_wrap .swiper-wrapper .swiper-slide .project_info p {font-size: 1.25rem; font-weight:500; letter-spacing:-0.02em; line-height:35px; text-align:left;}
+main #main #project_web #web_wrap .swiper-wrapper .swiper-slide .link {padding:30px 0; position: relative; left:10%;}
+main #main #project_web #web_wrap .swiper-wrapper .swiper-slide .link a {display:inline-block; padding:20px; border-radius:5px; background:#333; font-size: 1.25rem; letter-spacing:-0.02em; color:#FFF; margin-right:10px; transition:all 0.3s;}
+main #main #project_web #web_wrap .swiper-wrapper .swiper-slide .link a:hover {background: #FBB040;}
+/* 개별영역 */
+main #main #project_web #web_wrap .swiper-wrapper .web1 .link a:last-child {background:#d93535; color:#fff;}
+main #main #project_web #web_wrap .swiper-wrapper .web1 .link a:last-child:hover {background:#eee; color:#222; font-weight: 600;}
+main #main #project_web #web_wrap .swiper-wrapper .web2 .link a:last-child {background:#9cc255;}
+main #main #project_web #web_wrap .swiper-wrapper .web2 .link a:last-child:hover {background:#145307;}
+main #main #project_web #web_wrap .swiper-wrapper .web3 .link a:last-child {background:#0D4633; color:#fff;}
+main #main #project_web #web_wrap .swiper-wrapper .web3 .link a:last-child:hover {background:#9f653b;}
+main #main #project_web #web_wrap .swiper-wrapper .web4 .link a:last-child {background:#bf0000;}
+main #main #project_web #web_wrap .swiper-wrapper .web4 .link a:last-child:hover {background: #530000;}
+/* 랜딩페이지 */
+main #main #landing_project {width:1200px; margin:0 auto;}
+main #main #landing_project h1 {text-align:center; position: absolute; top:10%; left:50%; transform:translateX(-50%);}
+main #main #landing_project h1 img {}
+main #main #landing_project .landing_wrap {display:flex; justify-content: space-between; margin-top:100px;}
+main #main #landing_project .landing_wrap > div {}
+main #main #landing_project .landing_wrap > div img {width:500px;}
+main #main #landing_project .landing_wrap > div h2 {font-size: 1.25rem; font-weight:800; }
+main #main #landing_project .landing_wrap > div p {font-weight:500; letter-spacing:-0.02em; line-height:30px; margin:20px 0;}
+main #main #landing_project .landing_wrap > div > .link {}
+main #main #landing_project .landing_wrap > div > .link a {display:inline-block; padding:15px; border-radius:5px; background:#333; letter-spacing:-0.02em; color:#FFF; margin-right:10px; transition:all 0.3s;}
+main #main #landing_project .landing_wrap > div > .link a:hover {background:#FBB040;}
+/* 상세페이지 */
+main #main #page_design_wrap {}
+main #main #page_design_wrap h1 {text-align:center; position: absolute; top:10%; left:50%; transform:translateX(-50%);}
+main #main #page_design_wrap h1 img {}
+main #main #page_design_wrap .page_design {width:1200px; margin:0 auto; display:flex; justify-content:space-between; margin-top:100px;}
+main #main #page_design_wrap .page_design > div {height:600px; overflow:hidden auto; }
+main #main #page_design_wrap .page_design > div img {width:350px;}
+main #main #page_design_wrap .page_design .page1 {}
+main #main #page_design_wrap .page_design .page2 {}
+main #main #page_design_wrap .page_design .page3 {}
+/* sns 디자인 */
+main #main #sns_design_wrap {}
+main #main #sns_design_wrap h1 {text-align:center; position: absolute; top:12%; left:50%; transform:translateX(-50%); }
+main #main #sns_design_wrap h1 img {}
+main #main #sns_design_wrap .sns_design {width:1200px; height:550px; margin:0 auto; display:flex; flex-flow:row wrap; justify-content:space-between; align-content:space-between ;}
+main #main #sns_design_wrap .sns_design div {width:250px; height:250px; border-radius:10px; background-repeat:no-repeat; background-size:cover; transition:all 0.5s;}
+main #main #sns_design_wrap .sns_design .sns1 {background-image:url(../images/sns/sns1.jpg);}
+main #main #sns_design_wrap .sns_design .sns2 {background-image:url(../images/sns/sns2.jpg);}
+main #main #sns_design_wrap .sns_design .sns3 {background-image:url(../images/sns/sns3.jpg);}
+main #main #sns_design_wrap .sns_design .sns4 {background-image:url(../images/sns/sns4.png);}
+main #main #sns_design_wrap .sns_design .sns5 {background-image:url(../images/sns/sns5.jpg);}
+main #main #sns_design_wrap .sns_design .sns6 {background-image:url(../images/sns/sns6.png);}
+main #main #sns_design_wrap .sns_design .sns7 {background-image:url(../images/sns/sns7.png);}
+main #main #sns_design_wrap .sns_design .sns8 {background-image:url(../images/sns/sns8.png);}
+main #main #sns_design_wrap .sns_design div:hover {transform:scale(1.5);}
+/* etc */
+main #main #etc_design_wrap {}
+main #main #etc_design_wrap h1 {text-align:center; position: absolute; top:12%; left:50%; transform:translateX(-50%);}
+main #main #etc_design_wrap h1 img {}
+main #main #etc_design_wrap .etc_design {width:1200px; margin:0 auto; display:flex; flex-flow:row wrap; justify-content: space-between; margin-top:200px;}
+main #main #etc_design_wrap .etc_design div {margin-right:20px;}
+main #main #etc_design_wrap .etc_design div img {width:230px; }
+main #main #etc_design_wrap .etc_design div img:hover {transform:scale(2);}
+/* contact */
+main #main #contact {text-align:center;}
+main #main #contact p {font-size:3rem; font-weight: 800;}
+main #main #contact .info {display:flex; justify-content:center; margin:50px 0;}
+main #main #contact .info div {margin-right:30px;}
+main #main #contact .info div:last-child {margin-right:0;}
+main #main #contact .info div span {font-size:1.5rem; font-weight: 800; margin-right:20px; }
+main #main #contact .info div em {font-size:1.5rem; font-weight: 600;}
 
 
 .showHide {display:none !important;}
