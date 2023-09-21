@@ -76,9 +76,9 @@ main #main #profile .bg_txt { width:100%; height:100%;
     position:absolute; bottom: 10%; background:url(../images/bg_txt2.png) bottom repeat-x; animation:txt_bg1 80s linear infinite reverse; filter:opacity(5%);}
 main #main #profile h1 {animation:opacity_h1 1.5s ease;}
 main #main #profile .profile_wrap {display:flex;}
-main #main #profile .profile_wrap .left {transform:translateY(20%);}
-main #main #profile .profile_wrap .left > img {width:300px; height:300px;}
-main #main #profile .profile_wrap .left a {display:flex; align-items: center; justify-content:center; margin-top:80px; background:#ff9900; color:#fff; border-radius:10px; padding:10px; transition:all 0.5s;}
+main #main #profile .profile_wrap .left {transform:translateY(10%);}
+main #main #profile .profile_wrap .left > img {width:300px;}
+main #main #profile .profile_wrap .left a {display:flex; align-items: center; justify-content:center; margin-top:50px; background:#ff9900; color:#fff; border-radius:10px; padding:10px; transition:all 0.5s;}
 main #main #profile .profile_wrap .left a:hover {background:#6b6b6b;}
 main #main #profile .profile_wrap .left a span {font-size:1.33rem; font-weight:600; margin-right:10px; }
 main #main #profile .profile_wrap .left a img {width:30px; }
@@ -182,16 +182,29 @@ main #main #etc_design_wrap h1 {text-align:center; position: absolute; top:12%; 
 main #main #etc_design_wrap h1 img {}
 main #main #etc_design_wrap .etc_design {width:1200px; margin:0 auto; display:flex; flex-flow:row wrap; justify-content: space-between; margin-top:200px;}
 main #main #etc_design_wrap .etc_design div {margin-right:20px;}
-main #main #etc_design_wrap .etc_design div img {width:230px; }
-main #main #etc_design_wrap .etc_design div img:hover {transform:scale(2);}
+main #main #etc_design_wrap .etc_design div img {width:230px; transition:all 0.5s;}
+main #main #etc_design_wrap .etc_design div img:hover {transform:scale(1.7);}
 /* contact */
 main #main #contact {text-align:center;}
 main #main #contact p {font-size:3rem; font-weight: 800;}
+main #main #contact .contact {
+    font-weight:900; font-size:5rem;
+    background:linear-gradient(90deg, magenta, aqua, magenta);
+    -webkit-background-clip:text;
+    -webkit-text-fill-color:transparent;
+    background-size:400%;
+    animation:text_bg 5s linear infinite alternate;
+}
+main #main #contact .con_bg1 {
+    position:absolute; top:15%; height:110px; width:150%; 
+    background:url(../images/thank_bg.png) center repeat-x; animation:txt_bg 80s linear infinite reverse; filter:opacity(5%);}
+main #main #contact .thank {font-size:3rem;}
 main #main #contact .info {display:flex; justify-content:center; margin:50px 0;}
 main #main #contact .info div {margin-right:30px;}
 main #main #contact .info div:last-child {margin-right:0;}
-main #main #contact .info div span {font-size:1.5rem; font-weight: 800; margin-right:20px; }
-main #main #contact .info div em {font-size:1.5rem; font-weight: 600;}
+main #main #contact .info div span {font-size:2rem; font-weight: 800; margin-right:20px; }
+main #main #contact .info div em {font-size:2rem; font-weight: 600;}
+main #main #contact .con_bg2 {position:absolute; bottom:15%; height:110px; width:150%; background:url(../images/thank_bg.png) center repeat-x; animation:txt_bg1 80s linear infinite reverse; filter:opacity(5%);}
 #popup_page_design {
     position:fixed; left:0; top:0;
     width:100%; height:100vh;
@@ -239,4 +252,8 @@ main #main #contact .info div em {font-size:1.5rem; font-weight: 600;}
 @keyframes y50 {
     0% {transform:translateY(50px); opacity:0;}
     100% {transform:translateY(0); opacity:100%;}
+}
+@keyframes text_bg {
+    0% {background-position-x:0;}
+    100% {background-position-x:200%;}
 }
