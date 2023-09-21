@@ -324,6 +324,7 @@
                     </div>
                 </div>
             </div>
+            
             <div class="section" id="page_design_wrap">
                 <h1><img src="./images/page.png" alt="page디자인"></h1>
                 <div class="page_design">
@@ -383,13 +384,45 @@
             </div>
         </div>
     </main>
+    <div id="popup_page_design">
+        <div class="contents">
+            <img src="" alt="">
+        </div>
+    </div>
+    <script src="./script/jquery-3.6.0.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script> 
     <script src="./script/jquery.fullPage.js"></script>
     <script src="./script/portfolio.js"></script>
     <script>
+        $('#popup_page_design').hide()
+        $('.page_design > div').eq(0).on('click',function(){
+            $('#popup_page_design').show()
+            $('#popup_page_design img').attr('src','./images/page_1.jpg');
+            $('body').on('scroll touchmove mousewheel',function(e){ //마우스이벤트 막기
+                e.stopPropagation()
+            });
+        })
+        $('.page_design > div').eq(1).on('click',function(){
+            $('#popup_page_design').show()
+            $('#popup_page_design img').attr('src','./images/page_2.png');
+            $('body').on('scroll touchmove mousewheel',function(e){ //마우스이벤트 막기
+                e.stopPropagation()
+            });
+        })
+        $('.page_design > div').eq(2).on('click',function(){
+            $('#popup_page_design').show()
+            $('#popup_page_design img').attr('src','./images/page_3.png');
+            $('body').on('scroll touchmove mousewheel',function(e){ //마우스이벤트 막기
+                e.stopPropagation()
+            });
+        })
+        $('#popup_page_design').on('click',function(){
+            $('#popup_page_design').hide()
+            $('body').off('scroll touchmove mousewheel')
+        })
         /* .section형제의 부모대상 */
         $('#main').fullpage({
-            scrollBar:true, // 스크롤바 표시 유무 true false
+            /* scrollBar:true,  */// 스크롤바 표시 유무 true false
             scrollingSpeed:800, // 스크롤 속도
             navigation:true, // 우측 내비게이션 유무
             navigationTooltips:['HOME','PROFILE','SKILLS','PROJECT_WEB','SNS_DESIGN','CARD_DESIGN','CONTACT'], //페이지명
