@@ -169,12 +169,12 @@ main #main #sns_design_wrap .sns_design {width:1200px; height:550px; margin:0 au
 main #main #sns_design_wrap .sns_design div {width:250px; height:250px; border-radius:10px; background-repeat:no-repeat; background-size:cover; transition:all 0.5s;}
 main #main #sns_design_wrap .sns_design .sns1 {background-image:url(../images/sns/sns1.jpg);}
 main #main #sns_design_wrap .sns_design .sns2 {background-image:url(../images/sns/sns2.jpg);}
-main #main #sns_design_wrap .sns_design .sns3 {background-image:url(../images/sns/sns9.png);}
-main #main #sns_design_wrap .sns_design .sns4 {background-image:url(../images/sns/sns4.png);}
-main #main #sns_design_wrap .sns_design .sns5 {background-image:url(../images/sns/sns5.jpg);}
-main #main #sns_design_wrap .sns_design .sns6 {background-image:url(../images/sns/sns3.jpg);}
-main #main #sns_design_wrap .sns_design .sns7 {background-image:url(../images/sns/sns6.png);}
-main #main #sns_design_wrap .sns_design .sns8 {background-image:url(../images/sns/sns8.png);}
+main #main #sns_design_wrap .sns_design .sns3 {background-image:url(../images/sns/sns10.png);}
+main #main #sns_design_wrap .sns_design .sns4 {background-image:url(../images/sns/sns9.png);}
+main #main #sns_design_wrap .sns_design .sns5 {background-image:url(../images/sns/sns4.png);}
+main #main #sns_design_wrap .sns_design .sns6 {background-image:url(../images/sns/sns5.jpg);}
+main #main #sns_design_wrap .sns_design .sns7 {background-image:url(../images/sns/sns3.jpg);}
+main #main #sns_design_wrap .sns_design .sns8 {background-image:url(../images/sns/sns6.png);}
 main #main #sns_design_wrap .sns_design div:hover {transform:scale(1.5);}
 /* etc */
 main #main #etc_design_wrap {}
