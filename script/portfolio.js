@@ -28,3 +28,12 @@ closeBtn.addEventListener('click',function(e){
     openLogo.style.filter = 'opacity(0)'
     logo.style.filter = 'opacity(100%)'
 })
+// 마우스 움직일 때 이벤트 
+// client : 브라우저 에서 마우스를 얼만큼 움직였는지 값
+const mouseImg = document.querySelector('#mouse')
+console.log(mouseImg) 
+window.addEventListener('mousemove',function(e){ // 마우스를 움직이면 매개변수 e에 정보가 담긴다.
+    /* console.log(e) */
+    mouseImg.style.left = `${e.clientX}px`
+    mouseImg.style.top = `${e.clientY}px`
+})
